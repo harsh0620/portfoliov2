@@ -39,8 +39,7 @@ Getting Started
 To get a copy of the project up and running on your local machine, follow these steps:
 
 1. Clone the repository:
-   git clone https://github.com/your-username/your-portfolio.git
-
+   git clone https://github.com/harsh0620/portfoliov2
 2. Install dependencies:
    cd your-portfolio
    npm install
