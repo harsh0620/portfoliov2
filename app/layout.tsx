@@ -6,6 +6,7 @@ import { ModeToggle } from "./components/ModeToggle";
 import SheetSlider from "./components/SheetSlider";
 import GoUpButton from "./components/GoUpButton";
 import Footer from "./components/Footer";
+import GiveFeedback from "./components/GiveFeedback";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -50,6 +51,9 @@ export default function RootLayout({
             </div>
             <div style={{ position: "fixed", top: 20, right: 20 }}>
               <ModeToggle />
+            </div>
+            <div style={{ position: "fixed", bottom: 80, right: 20 }}>
+              <GiveFeedback />
             </div>
             <div style={{ position: "fixed", bottom: 20, right: 20 }}>
               <GoUpButton />
