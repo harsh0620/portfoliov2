@@ -1,10 +1,11 @@
 import { getProjectById } from "@/app/lib/data";
-import ProjectDescription from "@/components/ProjectDescription";
+
 import Link from "next/link";
 import React from "react";
 import { FaCode, FaPlay } from "react-icons/fa";
 import { notFound } from 'next/navigation';
-import BreadCrumb from "@/components/BreadCrumb";
+import ProjectDescription from "@/app/components/ProjectDescription";
+import BreadCrumb from "@/app/components/BreadCrumb";
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id;
   const project=await getProjectById(id);
