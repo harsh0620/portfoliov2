@@ -27,6 +27,11 @@ export default function RootLayout({
           <meta property="og:description" content="Personal Portfolio of Harsh Chandravanshi - Software Developer , Freelancer, Explorer" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://harshchandravanshi.tech" />
+          <meta property="og:url" content="https://www.harshchandravanshi.tech" />
+          <meta
+            property="og:image"
+            content="https://firebasestorage.googleapis.com/v0/b/portfoliov2-8d7a9.appspot.com/o/metaData%2Fwww.harshchandravanshi.tech_.png?alt=media&token=29c8452f-e475-4186-8d3e-ecb13e88f095"
+          />
           <meta
             property="og:image"
             content="https://firebasestorage.googleapis.com/v0/b/portfoliov2-8d7a9.appspot.com/o/metaData%2Fharshchandravanshi.tech.png?alt=media&token=d14e3d92-c10f-47cc-a6d3-e86d34032781"
