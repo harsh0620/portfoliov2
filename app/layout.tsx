@@ -7,6 +7,7 @@ import SheetSlider from "./components/SheetSlider";
 import GoUpButton from "./components/GoUpButton";
 import Footer from "./components/Footer";
 import GiveFeedback from "./components/GiveFeedback";
+import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,19 +26,36 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <head>
           <meta property="og:title" content="Harsh Chandravanshi" />
-          <meta property="og:description" content="Personal Portfolio of Harsh Chandravanshi - Software Developer , Freelancer, Explorer" />
+          <meta
+            property="og:description"
+            content="Personal Portfolio of Harsh Chandravanshi - Software Developer , Freelancer, Explorer"
+          />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://harshchandravanshi.tech" />
-          <meta property="og:url" content="https://www.harshchandravanshi.tech" />
+          <meta
+            property="og:url"
+            content="https://www.harshchandravanshi.tech"
+          />
           <meta
             property="og:image"
             content="https://firebasestorage.googleapis.com/v0/b/portfoliov2-8d7a9.appspot.com/o/metaData%2Fwww.harshchandravanshi.tech_.png?alt=media&token=29c8452f-e475-4186-8d3e-ecb13e88f095"
           />
-          <meta
-            property="og:image"
-            content="https://firebasestorage.googleapis.com/v0/b/portfoliov2-8d7a9.appspot.com/o/metaData%2Fharshchandravanshi.tech.png?alt=media&token=d14e3d92-c10f-47cc-a6d3-e86d34032781"
-          />
         </head>
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+
+        <Script strategy="lazyOnload">
+          {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+        </Script>
         <body>
           <ThemeProvider
             attribute="class"
