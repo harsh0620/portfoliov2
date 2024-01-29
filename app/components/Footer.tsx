@@ -16,7 +16,7 @@ export default async function Footer() {
         >
           Harsh Chandravanshi
         </Link>
-        <p className="my-6 text-gray-500 dark:text-gray-400">Made with next.js , tailwindcss, shadcn, react-icons and firebase</p>
+        <p className="my-6 text-gray-500 dark:text-gray-400">Made with Next.js , TailwindCSS, Shadcn/ui, react-icons, google-recaptcha and Firebase</p>
         <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
           {sectionData.map((section:Section, index:number) => {
             return (
