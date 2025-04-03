@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Loader2 } from "lucide-react";
 const ContactForm = () => {
@@ -100,6 +100,7 @@ const ContactForm = () => {
       );
     } catch (error) {
       console.error(error);
+      setIsLoading(false);
       window.alert("Error sending email. Please try again later.");
     }
 
@@ -195,13 +196,16 @@ const ContactForm = () => {
               placeholder="Details"
             ></textarea>
           </div>
-          <div style={recaptchaStyle} className="flex justify-center items-center">
-            <div >
-            <ReCAPTCHA
-              sitekey={recaptchaSiteKey}
-              onChange={handleRecaptchaChange}
-              style={{width:"100%"}}
-            />
+          <div
+            style={recaptchaStyle}
+            className="flex justify-center items-center"
+          >
+            <div>
+              <ReCAPTCHA
+                sitekey={recaptchaSiteKey}
+                onChange={handleRecaptchaChange}
+                style={{ width: "100%" }}
+              />
             </div>
           </div>
         </div>

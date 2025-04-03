@@ -19,7 +19,9 @@ import {
   EducationSkeleton,
 } from "./components/skeletons";
 import About from "./components/About";
+import { getHeroData } from "./lib/data";
 export default async function Home() {
+  const hero = await getHeroData();
   return (
     <main>
       <Suspense fallback={<HeroSkeleton />}>
@@ -64,7 +66,7 @@ export default async function Home() {
         <Banner
           title="Wants to hire me for your company"
           description="Always looking for new opportunities"
-          buttonLink="https://drive.google.com/file/d/175-i1zWsJ5YDNp7w7NO3jEf227CFglOW/view?usp=sharing"
+          buttonLink={hero?.socialData?.resume}
           buttonText="Check out my resume"
         />
       </Suspense>
