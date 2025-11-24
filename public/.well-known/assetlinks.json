@@ -5,8 +5,7 @@
       "namespace": "android_app",
       "package_name": "com.fampay.in.debug",
       "sha256_cert_fingerprints": [
-        "DA:53:3C:83:1F:5F:0B:49:4D:2A:0B:94:2C:5E:AC:11:BB:D7:EF:89:19:25:45:6A:2D:85:D3:B3:FC:B9:5C:C8",
-        "95:6B:7F:62:12:25:36:46:C9:92:48:1B:41:CC:C4:8C:E2:D7:3C:D5:BA:D9:90:C4:25:52:63:20:38:CB:3C:FB"
+        "DA:53:3C:83:1F:5F:0B:49:4D:2A:0B:94:2C:5E:AC:11:BB:D7:EF:89:19:25:45:6A:2D:85:D3:B3:FC:B9:5C:C8"
       ]
     }
   }
